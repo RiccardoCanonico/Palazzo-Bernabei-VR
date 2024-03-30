@@ -50,13 +50,25 @@ Anche se nel progetto caricato in questa Repository i pacchetti necessari dovreb
 Per implementare i movimenti di base dell'utente e la gestione delle interazioni è necessario aggiungere nella Hierarchy 2 prefab: OVRPlayerController e OVRCameraRigInteraction. Questi sono 2 asset saranno disponibili dopo aver importato il pacchetto sopracitato e si potranno trovare cercandoli tra i file del progetto nella finestra "Project" di Unity, filtrando la ricerca con l'opzione "In Packages".
 Dopo aver aggiunto l'OVRPlayerController alla scena, bisogna aggiungere l'OVRCameraRigInteraction come figlio sostituendola a l'OVRCameraRig che si trova di base. Di conseguenza si dovrebbe avere una gerarchia come quella mostrata nell'immagine.
 ![Add Modules](/ImmaginiReadme/prefab_hierarchy.png)
+
 Dopo aver importato i prefab si devono modificare alcune cose:
 - nell'inspector di OVRPlayerController bisogna cambiare il parametro "Height" per simulare l'altezza di un essere umano;
 - sempre nell'inspector di OVRPlayerController disabilitare la checkbox "Snap Rotation";
 - nel prefab TeleportControllerInteractor, che si trova sia in LeftController che in RightController, disabilitare gli script "Teleport Interactor", "Teleport Arc Gravity" e "Active State Tracker";
 - nel prefab ControllerTurnerInteractor cambiare l'opzione "Turn Method" da "Snap" a "Smooth";
+
 Una volta fatte queste modifiche i movimenti di base e interazioni dovrebbero essere funzionanti.
-Per realizzare un'interazione con un oggetto generico è necessario aggiungere un GameObject Interaction SDK. Per fare ciò si deve cliccare il tasto destro sull'oggetto che si vuole rendere interagibile, andare sulla sezione "Interaction SDK" e scegliere il tipo di interazione. Tramite la finestra che apparirà automaticamente si dovranno selezionare le componenti necessarie a far funzionare l'interazione. 
+Per realizzare un'interazione con un oggetto generico è necessario aggiungere un GameObject Interaction SDK. Per fare ciò si deve cliccare il tasto destro sull'oggetto che si vuole rendere interagibile, andare sulla sezione "Interaction SDK" e scegliere il tipo di interazione. Tramite la finestra che apparirà automaticamente si dovranno selezionare le componenti necessarie a far funzionare l'interazione.
+![Add Modules](/ImmaginiReadme/finestra_interaction.png).
+
+Alcune interazioni particolari hanno delle accortezze in più. 
+Ad esempio per quanto riguarda l'apertura delle porte bisogna fare alcune operazioni:
+- aggiungere all'oggetto che rappresenta la porta la componente HingeJoint, che vincola il movimento di rotazione rispetto ad un pivot;
+- aggiungere al nuovo oggetto Interaction SDK (in questo caso ISDK_HandGrabInteraction) lo script "One Grab Rotate Transformer" che controlla il movimento nel momento in cui sta avvenendo l'interazione e sulla sezione "Optionals" -> "Pivot Transform" associare un GameObject vuoto che rappresenta il pivot;
+- sempre nell'oggetto Interaction SDK, nello script "Grabbable" -> "Optionals" -> "One Grab Transformer" associare l'oggetto stesso;
+
+
+
 
 
 
