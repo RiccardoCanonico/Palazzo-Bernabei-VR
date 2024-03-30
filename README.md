@@ -24,7 +24,7 @@ Nella cartella Assets relativa al progetto realizzato in Unity si possono trovar
 - **Textures**: contiene tutte le texture utilizzate per creare i materiali. 
 
 ## Requisiti preliminari
-Per lavorare a questo progetto è necessaria una versione di Unity uguale o superiore alla 2022.3.16f1 (LTS), dato che è quella utilizzata per lo sviluppo.  
+Per lavorare a questo progetto è necessaria una versione di Unity uguale o superiore alla 2022.3.16f1 (LTS), dato che è quella utilizzata per lo sviluppo. Inoltre deve essere utilizzato un visore Meta Quest 2, Meta Quest 3, oppure Meta Quest Pro, ma il progetto in sé è stato pensato per essere eseguito su un Meta Quest 3.
 
 ## Configurazione e implementazione del visore Meta Quest 3 su Unity:
 ### Configurazione
@@ -38,4 +38,13 @@ A questo punto per sviluppare un'App su Unity che funzioni per il visore è nece
 ![Add Modules](/ImmaginiReadme/add_modules.png)
 
 Successivamente si può aprire il progetto su Unity, andare nelle Build Settings, recarsi sulla scheda dedicata ad Android e cambiare piattaforma. Quando il processo di cambio è finito, se il visore è collegato si può scegliere come dispositivo su cui installare le build e successivamente cliccare su "Build" o "Build And Run" per costruire l'App.
+![Add Modules](/ImmaginiReadme/build_settings.png)
 
+L'ultima operazione da fare è andare nelle Project Settings, recarsi nella sezione "XR Plug-in Management", poi nella scheda dedicata ad Android e abilitare la checkbox "Oculus" per abilitare l'installazione dei pacchetti dedicati al Meta Quest.
+![Add Modules](/ImmaginiReadme/project_settings_xrplugin.png)
+
+Anche se nel progetto caricato in questa Repository i pacchetti necessari dovrebbero già essere installati, se ci fossero problemi va importato dall'Asset Store il pacchetto "Meta XR All-In-One SDK".
+
+### Implementazione
+Per implementare i movimenti di base dell'utente e la gestione delle interazioni è necessario aggiungere nella Hierarchy 2 prefab: OVRPlayerController e OVRCameraRigInteraction. Questi sono 2 asset saranno disponibili dopo aver importato il pacchetto sopracitato e si potranno trovare cercandoli tra i file del progetto nella finestra "Project" di Unity, filtrando la ricerca con l'opzione "In Packages".
+Dopo aver aggiunto l'OVRPlayerController alla scena, bisogna aggiungere l'OVRCameraRigInteraction come figlio sostituendola a l'OVRCameraRig che si trova di base. Di conseguenza si dovrebbe avere una gerarchia come quella mostrata nell'immagine.
