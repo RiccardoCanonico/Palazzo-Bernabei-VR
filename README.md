@@ -9,6 +9,10 @@ Questa Repository è divisa in due cartelle:
    - **aule_palazzo_bernabei.blend**: file dove si possono trovare tutti i modelli relativi alle stanze al piano inferiore che sono: l'ingresso per le aule, il laboratorio immersivo, il secondo laboratorio di informatica e l'aula insonorizzata;
    -  **stemmi_scansionati.blend**: file dove si possono trovare tutti i modelli scansionati con lo scanner 3D;
 2. **Cartella Unity**: contiene a sua volta la cartella Progetto-Assisi, che contiene tutti i file relativi al progetto creato con Unity.
+3. **Cartella ImmaginiReadme**: contiene tutte le immagini utilizzate per la scrittura del README.
+
+## Requisiti preliminari
+Per lavorare a questo progetto è necessaria una versione di Unity uguale o superiore alla 2022.3.16f1 (LTS), dato che è quella utilizzata per lo sviluppo. Inoltre deve essere utilizzato un visore Meta Quest 2, Meta Quest 3, oppure Meta Quest Pro, ma il progetto in sé è stato pensato per essere eseguito su un Meta Quest 3.
 
 ## Cartella Progetto-Assisi
 Nella cartella Assets relativa al progetto realizzato in Unity si possono trovare le seguenti sottocartelle:
@@ -22,9 +26,6 @@ Nella cartella Assets relativa al progetto realizzato in Unity si possono trovar
     3. **Ingresso**: scena relativa sollo all'atrio del Palazzo e alla terrazza;
     4. **Palazzo Bernabei**: scena che contiene il Palazzo completo;
 - **Textures**: contiene tutte le texture utilizzate per creare i materiali. 
-
-## Requisiti preliminari
-Per lavorare a questo progetto è necessaria una versione di Unity uguale o superiore alla 2022.3.16f1 (LTS), dato che è quella utilizzata per lo sviluppo. Inoltre deve essere utilizzato un visore Meta Quest 2, Meta Quest 3, oppure Meta Quest Pro, ma il progetto in sé è stato pensato per essere eseguito su un Meta Quest 3.
 
 ## Configurazione e implementazione del visore Meta Quest 3 su Unity:
 ### Configurazione
@@ -48,3 +49,15 @@ Anche se nel progetto caricato in questa Repository i pacchetti necessari dovreb
 ### Implementazione
 Per implementare i movimenti di base dell'utente e la gestione delle interazioni è necessario aggiungere nella Hierarchy 2 prefab: OVRPlayerController e OVRCameraRigInteraction. Questi sono 2 asset saranno disponibili dopo aver importato il pacchetto sopracitato e si potranno trovare cercandoli tra i file del progetto nella finestra "Project" di Unity, filtrando la ricerca con l'opzione "In Packages".
 Dopo aver aggiunto l'OVRPlayerController alla scena, bisogna aggiungere l'OVRCameraRigInteraction come figlio sostituendola a l'OVRCameraRig che si trova di base. Di conseguenza si dovrebbe avere una gerarchia come quella mostrata nell'immagine.
+![Add Modules](/ImmaginiReadme/prefab_hierarchy.png)
+Dopo aver importato i prefab si devono modificare alcune cose:
+- nell'inspector di OVRPlayerController bisogna cambiare il parametro "Height" per simulare l'altezza di un essere umano;
+- sempre nell'inspector di OVRPlayerController disabilitare la checkbox "Snap Rotation";
+- nel prefab TeleportControllerInteractor, che si trova sia in LeftController che in RightController, disabilitare gli script "Teleport Interactor", "Teleport Arc Gravity" e "Active State Tracker";
+- nel prefab ControllerTurnerInteractor cambiare l'opzione "Turn Method" da "Snap" a "Smooth";
+Una volta fatte queste modifiche i movimenti di base e interazioni dovrebbero essere funzionanti.
+Per realizzare un'interazione con un oggetto generico è necessario aggiungere un GameObject Interaction SDK. Per fare ciò si deve cliccare il tasto destro sull'oggetto che si vuole rendere interagibile, andare sulla sezione "Interaction SDK" e scegliere il tipo di interazione. Tramite la finestra che apparirà automaticamente si dovranno selezionare le componenti necessarie a far funzionare l'interazione. 
+
+
+
+ 
