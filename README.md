@@ -59,13 +59,20 @@ Dopo aver importato i prefab si devono modificare alcune cose:
 
 Una volta fatte queste modifiche i movimenti di base e interazioni dovrebbero essere funzionanti.
 Per realizzare un'interazione con un oggetto generico è necessario aggiungere un GameObject Interaction SDK. Per fare ciò si deve cliccare il tasto destro sull'oggetto che si vuole rendere interagibile, andare sulla sezione "Interaction SDK" e scegliere il tipo di interazione. Tramite la finestra che apparirà automaticamente si dovranno selezionare le componenti necessarie a far funzionare l'interazione.
-![Add Modules](/ImmaginiReadme/finestra_interaction.png).
+![Add Modules](/ImmaginiReadme/finestra_interaction.png)
 
 Alcune interazioni particolari hanno delle accortezze in più. 
 Ad esempio per quanto riguarda l'apertura delle porte bisogna fare alcune operazioni:
 - aggiungere all'oggetto che rappresenta la porta la componente HingeJoint, che vincola il movimento di rotazione rispetto ad un pivot;
 - aggiungere al nuovo oggetto Interaction SDK (in questo caso ISDK_HandGrabInteraction) lo script "One Grab Rotate Transformer" che controlla il movimento nel momento in cui sta avvenendo l'interazione e sulla sezione "Optionals" -> "Pivot Transform" associare un GameObject vuoto che rappresenta il pivot;
+![One Grab Rotate Transformer](/ImmaginiReadme/interaction_sdk_2.png)
 - sempre nell'oggetto Interaction SDK, nello script "Grabbable" -> "Optionals" -> "One Grab Transformer" associare l'oggetto stesso;
+![Grabbable](/ImmaginiReadme/interaction_sdk_1.png)
+
+## Unity Version Control
+
+
+
 
 
 
