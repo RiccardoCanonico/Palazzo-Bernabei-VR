@@ -31,6 +31,11 @@ Per lavorare a questo progetto è necessaria una versione di Unity uguale o supe
 Se il visore viene acceso per la prima volta è necessario seguire i passaggi che vengono indicati nel Meta Quest stesso quando viene indossato.
 Innanzitutto è necessario abilitare la modalità sviluppatore, in modo tale da poter connettere il visore al computer e installare le build di prova dell'applicazione. Per fare ciò prima di tutto è necessaria la creazione di un account sviluppatore da questo link https://developer.oculus.com/. Successivamente deve essere creata un'organizzazione cliccando "Manage Your App" nella scheda "Utilize insights with Developer Dashboard".
 ![Sito Oculus](/ImmaginiReadme/sito_oculus.png)
+
 Dopo aver fatto ciò, dall'App mobile scaricata durante il setup iniziale, si può abilitare la modalità sviluppatore per il visore.
 Per gestire il visore quando è collegato al computer in maniera più comoda si può installare l'App Meta Quest Developer Hub.
-A questo punto per sviluppare un'App su Unity che funzioni per il visore è necessario installare i moduli Android per la versione che si sta utilizzando. Per farlo bisogna andare nella sezione "Installs" dello Unity Hub, cliccare sull'icona delle impostazioni della versione e infine cliccare su "Add Modules". Una volta fatto, selezionare "Android Build Support" e poi cliccare sul pulsante "Install"
+A questo punto per sviluppare un'App su Unity che funzioni per il visore è necessario installare i moduli Android per la versione che si sta utilizzando. Per farlo bisogna andare nella sezione "Installs" dello Unity Hub, cliccare sull'icona delle impostazioni della versione e infine cliccare su "Add Modules". Una volta fatto, selezionare "Android Build Support" e poi cliccare sul pulsante "Install".
+![Add Modules](/ImmaginiReadme/add_modules.png)
+
+Successivamente si può aprire il progetto su Unity, andare nelle Build Settings, recarsi sulla scheda dedicata ad Android e cambiare piattaforma. Quando il processo di cambio è finito, se il visore è collegato si può scegliere come dispositivo su cui installare le build e successivamente cliccare su "Build" o "Build And Run" per costruire l'App.
+
