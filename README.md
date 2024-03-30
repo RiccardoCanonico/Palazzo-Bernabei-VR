@@ -70,6 +70,10 @@ Ad esempio per quanto riguarda l'apertura delle porte bisogna fare alcune operaz
 ![Grabbable](/ImmaginiReadme/interaction_sdk_1.png)
 
 ## Unity Version Control
+-copiare progetto Prgetto-Assisi nella propria workspace diversa dalla repository locale
+-configurazione iniziale
+-organizzazione scene e branch
+-"risoluzione" conflitti
 
 
 
