@@ -27,7 +27,7 @@ Nella cartella Assets relativa al progetto realizzato in Unity si possono trovar
     4. **Palazzo Bernabei**: scena che contiene il Palazzo completo;
 - **Textures**: contiene tutte le texture utilizzate per creare i materiali. 
 
-## Configurazione e implementazione del visore Meta Quest 3 su Unity:
+## Configurazione e implementazione del visore Meta Quest 3 su Unity
 ### Configurazione
 Se il visore viene acceso per la prima volta è necessario seguire i passaggi che vengono indicati nel Meta Quest stesso quando viene indossato.
 Innanzitutto è necessario abilitare la modalità sviluppatore, in modo tale da poter connettere il visore al computer e installare le build di prova dell'applicazione. Per fare ciò prima di tutto è necessaria la creazione di un account sviluppatore da questo link https://developer.oculus.com/. Successivamente deve essere creata un'organizzazione cliccando "Manage Your App" nella scheda "Utilize insights with Developer Dashboard".
