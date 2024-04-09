@@ -19,11 +19,11 @@ Nella cartella Assets relativa al progetto realizzato in Unity si possono trovar
 - **CharacterPack Lowpoly** e **Distant Lands**: contiene asset scaricati dallo store di Unity che sono stati usati per i modelli delle persone che si possono trovare nel laboratorio immersivo.
 - **Decorative Plants** e **Stylized Plants Kit**: contiene asset scaricati dallo store di Unity che sono stati usati per i modelli delle piante che si possono trovare nella terrazza.
 - **Models**: contiene tutti i modelli importati da Blender, suddivisi nelle sottocartelle: aula1 (laboratorio immersivo), aula 2 (secondo laboratorio di informatica), aula3 (aula immersiva), ingressoAule, corridoio (struttura di collegamento tra le aule), Citta (modelli usati per le case inserite nell'oggetto Terreno), Ingresso, Terrazzo e Facciata. La stessa suddivisione si troverà anche nella Hierarchy su Unity.
--**Materials**: contiene tutti i materiali applicati ai modelli.
+- **Materials**: contiene tutti i materiali applicati ai modelli.
 - **Scenes**: contiene 4 scene:
-    1. **Aule**: scena relativa sollo alle stanze al piano inferiore;
-    2. **Facciata**: scena relativa sollo alla facciata del Palazzo;
-    3. **Ingresso**: scena relativa sollo all'atrio del Palazzo e alla terrazza;
+    1. **Aule**: scena relativa solo alle stanze al piano inferiore;
+    2. **Facciata**: scena relativa solo alla facciata del Palazzo;
+    3. **Ingresso**: scena relativa solo all'atrio del Palazzo e alla terrazza;
     4. **Palazzo Bernabei**: scena che contiene il Palazzo completo;
 - **Textures**: contiene tutte le texture utilizzate per creare i materiali. 
 
@@ -35,7 +35,7 @@ Innanzitutto è necessario abilitare la modalità sviluppatore, in modo tale da 
 
 Dopo aver fatto ciò, dall'App mobile scaricata durante il setup iniziale, si può abilitare la modalità sviluppatore per il visore.
 Per gestire il visore quando è collegato al computer in maniera più comoda si può installare l'App Meta Quest Developer Hub.
-A questo punto per sviluppare un'App su Unity che funzioni per il visore è necessario installare i moduli Android per la versione che si sta utilizzando. Per farlo bisogna andare nella sezione "Installs" dello Unity Hub, cliccare sull'icona delle impostazioni della versione e infine cliccare su "Add Modules". Una volta fatto, selezionare "Android Build Support" e poi cliccare sul pulsante "Install".
+A questo punto per sviluppare un'app su Unity che funzioni per il visore è necessario installare i moduli Android per la versione che si sta utilizzando. Per farlo bisogna andare nella sezione "Installs" dello Unity Hub, cliccare sull'icona delle impostazioni della versione e infine cliccare su "Add Modules". Una volta fatto, selezionare "Android Build Support" e poi cliccare sul pulsante "Install".
 ![Add Modules](/ImmaginiReadme/add_modules.png)
 
 Successivamente si può aprire il progetto su Unity, andare nelle Build Settings, recarsi sulla scheda dedicata ad Android e cambiare piattaforma. Quando il processo di cambio è finito, se il visore è collegato si può scegliere come dispositivo su cui installare le build e successivamente cliccare su "Build" o "Build And Run" per costruire l'App.
